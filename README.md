@@ -1,1 +1,2 @@
 [![](https://jitpack.io/v/pavel-egorov1993/java-project-lvl1.svg)](https://jitpack.io/#pavel-egorov1993/java-project-lvl1)
+[![Build Status](https://travis-ci.org/pavel-egorov1993/java-project-lvl1.svg?branch=master)](https://travis-ci.org/pavel-egorov1993/java-project-lvl1)
