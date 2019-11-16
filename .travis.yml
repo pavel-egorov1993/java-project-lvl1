@@ -1,6 +1,7 @@
 language: java
-jdk: oraclejdk11
-install:
-  - mvn -N io.takari:maven:wrapper
-  - chmod +x ./mvnw
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+jdk: openjdk11
+install: true
+script: mvn clean package
+cache:
+  directories:
+    - $HOME/.m2
