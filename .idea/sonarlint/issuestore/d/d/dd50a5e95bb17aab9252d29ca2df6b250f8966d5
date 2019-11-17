@@ -1,0 +1,33 @@
+
+[
+squid:S106$"9Replace this use of System.out or System.err by a logger.(¿÷·›üÿÿÿÿ8æèÄÕç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(îŒÈŒ8æèÄÕç-
+[
+squid:S106""9Replace this use of System.out or System.err by a logger.(¿÷·›üÿÿÿÿ8æèÄÕç-
+V
+squid:S1065"9Replace this use of System.out or System.err by a logger.(Âƒİ¬8æèÄÕç-
+[
+squid:S106<"9Replace this use of System.out or System.err by a logger.(³àèüÿÿÿÿ8æèÄÕç-
+V
+squid:S106B"9Replace this use of System.out or System.err by a logger.(şÃ–8§çÁÕç-
+[
+squid:S106!"9Replace this use of System.out or System.err by a logger.(¿÷·›üÿÿÿÿ8æèÄÕç-
+‚squid:S1192"dDefine a constant instead of duplicating this literal "Ğ’Ğ°Ğ¼ Ğ²Ñ‹Ğ¿Ğ°Ğ»Ğ° ĞºĞ°Ñ€Ñ‚Ğ° %s%n" 3 times.(îŒÈŒ8æèÄÕç-
+•squid:S1192!"rDefine a constant instead of duplicating this literal "ĞšĞ¾Ğ¼Ğ¿ÑŒÑÑ‚ĞµÑ€Ñƒ Ğ²Ñ‹Ğ¿Ğ°Ğ»Ğ° ĞºĞ°Ñ€Ñ‚Ğ° %s%n" 3 times.(¿÷·›üÿÿÿÿ8æèÄÕç-
+V
+squid:S106:"9Replace this use of System.out or System.err by a logger.(¶Ü“ò8æèÄÕç-
+V
+squid:S1062"9Replace this use of System.out or System.err by a logger.(‘§Û§8æèÄÕç-
+[
+squid:S106b"9Replace this use of System.out or System.err by a logger.(ûèüùÿÿÿÿ8§çÁÕç-
+V
+squid:S106("9Replace this use of System.out or System.err by a logger.(¼²ØÛ8æèÄÕç-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÊ®õ8‘î÷Ñç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(îŒÈŒ8æèÄÕç-
+[
+squid:S106-"9Replace this use of System.out or System.err by a logger.(½Ä»ÿúÿÿÿÿ8æèÄÕç-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(úÊ®õ8æèÄÕç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(îŒÈŒ8æèÄÕç-

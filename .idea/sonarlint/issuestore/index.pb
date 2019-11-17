@@ -11,3 +11,11 @@ G
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 M
 src/main/java/games/Slot.java,0\7\07790f10d12140afaf57f6304ea06d13e093c6b9
+O
+src/main/java/games/Choice.java,7\a\7a732e0ac0db914a196de72487bb70ce76fac648
+R
+"src/main/java/games/CardUtils.java,b\6\b609d5994ae1a43f893709bf0d4d827de97c529f
+Q
+!src/main/java/games/Drunkard.java,8\9\8962b0bd72607159ecbe7541800d5f621621561a
+R
+"src/main/java/games/BlackJack.java,d\d\dd50a5e95bb17aab9252d29ca2df6b250f8966d5
