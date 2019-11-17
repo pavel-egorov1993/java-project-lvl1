@@ -1,5 +1,5 @@
 package games;
-public class Drunkard extends Cards {
+public class Drunkard extends CardUtils {
     private static final int FIRST_PLAYER = 0;
     private static final int SECOND_PLAYER = 1;
 

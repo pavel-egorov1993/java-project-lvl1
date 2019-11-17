@@ -1,7 +1,8 @@
+games\CardUtils$Par.class
 games\BlackJack.class
 games\Choice.class
 games\Drunkard.class
-games\Cards$Suit.class
 games\Slot.class
-games\Cards$Par.class
-games\Cards.class
+games\CardUtils$Suit.class
+games\CardUtils.class
+games\BlackJack$1.class
