@@ -2,7 +2,7 @@ package games;
 
 public class Slot {
 
-    private int cash = 1000;
+    private int cash = 100;
     private int rate = 10;
     private int FirstDrum;
     private int SecondDrum;
