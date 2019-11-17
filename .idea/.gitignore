@@ -2,8 +2,8 @@
 # Default ignored files
 /workspace.xml
 
-target/
+/target/
 
-.mvn/wrapper/maven-wrapper.jar
+/.mvn/wrapper/maven-wrapper.jar
 
-pom.xml
+/pom.xml
