@@ -9,7 +9,7 @@ public class Slot {
     private int ThirdDrum;
     private int size = 7;
 
-    Slot(){
+   public Slot(){
         for(int i = rate;i <= cash;) {
             System.out.println("У Вас " + cash + "$," + " ставка - " + rate + "$");
             FirstDrum = (FirstDrum + (int) Math.round(Math.random() * 100)) % size;
@@ -20,7 +20,6 @@ public class Slot {
             if(FirstDrum == SecondDrum && FirstDrum == ThirdDrum) {
                 cash+=1000;
                 System.out.println("Поздравляем!!! Ваш выигрыш 1000$, теперь капитал составляет - " + cash + "$");
-                return;
             }
             else {
                 cash-=rate;

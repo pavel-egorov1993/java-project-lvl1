@@ -1,4 +1,20 @@
 
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÉïıùÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ü°¸¢øÿÿÿÿ
+Lsquid:S2140")Use "java.util.Random.nextInt()" instead.(¢ÔÁ¢ıÿÿÿÿ8©’˜ªç-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(â¬‹ªüÿÿÿÿ8©¦©ç-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ˆøèúÿÿÿÿ8ã£š©ç-
+[squid:S1854 "8Remove this useless assignment to local variable "slot".(ã‚ƒ„ùÿÿÿÿ8´Ò§©ç-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¯éøéøÿÿÿÿ8‰ë‡©ç-
+Lsquid:S2140")Use "java.util.Random.nextInt()" instead.(õìëœùÿÿÿÿ8©’˜ªç-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÉïıùÿÿÿÿ8Î¼¨ç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(‰Ş¢ï8‰ë‡©ç-
+xsquid:S00116	"TRename this field "ThirdDrum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¶éîùÿÿÿÿ8“îë¨ç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(£ãğ8ëÛ²©ç-
+Lsquid:S2140")Use "java.util.Random.nextInt()" instead.(ßæÅüÿÿÿÿ8©’˜ªç-
+tsquid:S00116"URename this field "SecondDrum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹í¬õ8û­³¨ç-
+xsquid:S00116"TRename this field "FirstDrum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äúÊûúÿÿÿÿ8Šˆªç-
+Lsquid:S1481 ")Remove this unused "slot" local variable.(ã‚ƒ„ùÿÿÿÿ8´Ò§©ç-
