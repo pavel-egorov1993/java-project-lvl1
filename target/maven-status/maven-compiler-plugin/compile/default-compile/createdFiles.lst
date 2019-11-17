@@ -1,3 +1,6 @@
+games\Cards$Suit.class
+games\Slot.class
+games\Cards$Par.class
 games\Choice.class
 games\Drunkard.class
-games\Slot.class
+games\Cards.class
