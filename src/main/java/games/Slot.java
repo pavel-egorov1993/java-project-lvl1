@@ -1,6 +1,10 @@
 package games;
 
+import org.slf4j.Logger;
+
 public class Slot {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(Slot.class);
 
     private int cash = 100;
     private int rate = 10;
@@ -12,23 +16,23 @@ public class Slot {
    public Slot(){
         for(int i = rate;i <= cash;) {
             if(cash > 10000) {
-                System.out.println("К сожалению вас заподозрили в шулерстве и попросили уйти.");
+                log.info("К сожалению вас заподозрили в шулерстве и попросили уйти.");
                 System.out.println("Вы уносите с собой выигранный куш - " + cash + "$");
                 return;
             }
-            System.out.println("У Вас " + cash + "$," + " ставка - " + rate + "$");
+            log.info("У Вас " + cash + "$," + " ставка - " + rate + "$");
             FirstDrum = (FirstDrum + (int) Math.round(Math.random() * 100)) % size;
             SecondDrum = (SecondDrum + (int) Math.round(Math.random() * 100)) % size;
             ThirdDrum = (ThirdDrum + (int) Math.round(Math.random() * 100)) % size;
-            System.out.println("Крутим барабаны! Розыгриш принес следующие результаты:");
-            System.out.println("первый барабан - " + FirstDrum + " второй - " + SecondDrum + " третий - " + ThirdDrum);
+            log.info("Крутим барабаны! Розыгриш принес следующие результаты:");
+            log.info("первый барабан - " + FirstDrum + " второй - " + SecondDrum + " третий - " + ThirdDrum);
             if(FirstDrum == SecondDrum && FirstDrum == ThirdDrum) {
                 cash+=1000;
-                System.out.println("Поздравляем!!! Ваш выигрыш 1000$, теперь капитал составляет - " + cash + "$");
+                log.info("Поздравляем!!! Ваш выигрыш 1000$, теперь капитал составляет - " + cash + "$");
             }
             else {
                 cash-=rate;
-                System.out.println("Проигрыш " + rate + "$, Ваш капитал теперь составляет: " + cash + "$");
+                log.info("Проигрыш " + rate + "$, Ваш капитал теперь составляет: " + cash + "$");
             }
         }
     }

@@ -1,12 +1,15 @@
 package games;
 
 import java.io.IOException;
+import org.slf4j.Logger;
 
 public class Choice {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(Choice.class);
     private static final String LINE_SEPARATOR = System.lineSeparator();
 
     public static void main(final String... args) throws IOException {
-            System.out.println("Выберите игру:\n1 - \"однорукий бандит\", 2 - \"пьяница\", 3 - \"очко\"");
+            log.info("Выберите игру:\n1 - \"однорукий бандит\", 2 - \"пьяница\", 3 - \"очко\"");
             switch (getCharacterFromUser()) {
                 case '1': Slot.main();
                     break;

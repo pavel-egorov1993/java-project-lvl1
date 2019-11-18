@@ -1,5 +1,11 @@
 package games;
+
+import org.slf4j.Logger;
+
 public class Drunkard extends CardUtils {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(Drunkard.class);
+
     private static final int FIRST_PLAYER = 0;
     private static final int SECOND_PLAYER = 1;
 
@@ -20,7 +26,7 @@ public class Drunkard extends CardUtils {
             final int firstPlayerCard = getPlayerCard(FIRST_PLAYER, playerCardTails[FIRST_PLAYER]);
             final int secondPlayerCard = getPlayerCard(SECOND_PLAYER, playerCardTails[SECOND_PLAYER]);
 
-            System.out.format("Итерация №%d Игрок №1 карта: %s; игрок №2 карта: %s. %n",
+            log.info("Итерация № {} Игрок №1 карта: {}; игрок №2 карта: {}. %n",
                     acc, getString(firstPlayerCard), getString(secondPlayerCard));
 
             final int firstPlayerPar =  firstPlayerCard % PARS_TOTAL_COUNT;
@@ -28,13 +34,13 @@ public class Drunkard extends CardUtils {
 
             if (firstPlayerPar > secondPlayerPar || firstPlayerPar == 0 && secondPlayerPar == 8) {
                 addCardsToPlayer(FIRST_PLAYER, firstPlayerCard, secondPlayerCard);
-                System.out.format("Выиграл %d игрок! %n", FIRST_PLAYER + 1);
+                log.info("Выиграл {} игрок! %n", FIRST_PLAYER + 1);
             } else if (firstPlayerPar == secondPlayerPar) {
                 addCardsToPlayer(-1, firstPlayerCard, secondPlayerCard);
-                System.out.println("Спор - каждый остаётся при своих!");
+                log.info("Спор - каждый остаётся при своих!");
             } else {
                 addCardsToPlayer(SECOND_PLAYER, firstPlayerCard, secondPlayerCard);
-                System.out.format("Выиграл %d игрок! %n", SECOND_PLAYER + 1);
+                log.info("Выиграл {} игрок! %n", SECOND_PLAYER + 1);
             }
 
             playerCardTails[FIRST_PLAYER] = incrementIndex(playerCardTails[FIRST_PLAYER]);
@@ -45,7 +51,7 @@ public class Drunkard extends CardUtils {
             final int winner = getWinner();
 
             if (winner != -1) {
-                System.out.format("Выиграл %d игрок! Количество произведённых итераций: %d.",
+                log.info("Выиграл {} игрок! Количество произведённых итераций: {}.",
                         winner + 1, acc);
             }
         }

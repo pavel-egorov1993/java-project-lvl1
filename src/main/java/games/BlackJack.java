@@ -1,8 +1,11 @@
 package games;
 
 import java.io.IOException;
+import org.slf4j.Logger;
 
 public class BlackJack extends CardUtils {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(BlackJack.class);
 
     private static int[] cards;
     private static int cursor;
@@ -20,50 +23,51 @@ public class BlackJack extends CardUtils {
         while (playersMoney[PLAYER] > 0 && playersMoney[CASINO] > 0) {
             initRound();
 
-            System.out.format("Вам выпала карта %s%n", CardUtils.getString(addCard2Player(PLAYER)));
-            System.out.format("Вам выпала карта %s%n", CardUtils.getString(addCard2Player(PLAYER)));
+            log.info("Вам выпала карта {}%n", getString(addCard2Player(PLAYER)));
+            log.info("Вам выпала карта {}%n", getString(addCard2Player(PLAYER)));
             while (sum(PLAYER) < 20) {
                 if (confirm("Берем еще?")) {
-                    System.out.format("Вам выпала карта %s%n", CardUtils.getString(addCard2Player(PLAYER)));
+                    log.info("Вам выпала карта {}%n", getString(addCard2Player(PLAYER)));
                 } else {
                     break;
                 }
             }
 
-            System.out.format("Компьютеру выпала карта %s%n", CardUtils.getString(addCard2Player(CASINO)));
-            System.out.format("Компьютеру выпала карта %s%n", CardUtils.getString(addCard2Player(CASINO)));
+            log.info("Компьютеру выпала карта {}%n", CardUtils.getString(addCard2Player(CASINO)));
+            log.info("Компьютеру выпала карта {}%n", CardUtils.getString(addCard2Player(CASINO)));
             while (sum(CASINO) < 17) {
-                System.out.format("Компьютеру выпала карта %s%n", CardUtils.getString(addCard2Player(CASINO)));
+                log.info("Компьютеру выпала карта {}%n", CardUtils.getString(addCard2Player(CASINO)));
             }
             final int sumPlayer = getFinalSum(PLAYER);
             final int sumCasino = getFinalSum(CASINO);
-            System.out.format("Сумма ваших очков - %d, компьютера - %d%n", sumPlayer, sumCasino);
+            log.info("Сумма ваших очков - {}, компьютера - {}%n", sumPlayer, sumCasino);
 
             if (sumCasino > sumPlayer) {
                 playersMoney[PLAYER] -= RATE;
                 playersMoney[CASINO] += RATE;
-                System.out.format("Вы проиграли раунд! Теряете %d$%n", RATE);
+                log.info("Вы проиграли раунд! Теряете {}$%n", RATE);
             }
             if (sumCasino < sumPlayer) {
                 playersMoney[PLAYER] += RATE;
                 playersMoney[CASINO] -= RATE;
-                System.out.format("Вы выиграли раунд! Получаете %d$%n", RATE);
+                log.info("Вы выиграли раунд! Получаете {}$%n", RATE);
             }
             if(sumCasino == sumPlayer){
-                System.out.println("Ничья - каждый остается при своих!");
+                log.info("Ничья - каждый остается при своих!");
             }
         }
 
-        if (playersMoney[PLAYER] > 0)
-            System.out.println("Вы выиграли! Поздравляем!");
-        else
-            System.out.println("Вы проиграли. Соболезнуем...");
-
+        if (playersMoney[PLAYER] > 0) {
+            log.info("Вы выиграли! Поздравляем!");
+        }
+        else {
+            log.info("Вы проиграли. Соболезнуем...");
+        }
     }
 
 
     static boolean confirm(String message) throws IOException {
-        System.out.println(message + " \"Y\" - Да, {любой другой символ} - нет (Чтобы выйти из игры, нажмите Ctrl + C)");
+        log.info(message + " \"Y\" - Да, {любой другой символ} - нет (Чтобы выйти из игры, нажмите Ctrl + C)");
         switch (Choice.getCharacterFromUser()) {
             case 'Y':
             case 'y': return true;
@@ -95,7 +99,7 @@ public class BlackJack extends CardUtils {
     }
 
     private static void initRound() {
-        System.out.println("\nУ Вас " + playersMoney[0] + "$, у компьютера - " + playersMoney[1] + "$. Начинаем новый раунд!");
+        log.info("\nУ Вас " + playersMoney[0] + "$, у компьютера - " + playersMoney[1] + "$. Начинаем новый раунд!");
         cards = getShuffledCards();
         playersCards = new int[2][MAX_CARDS_COUNT];
         playersCursors = new int[]{0, 0};
