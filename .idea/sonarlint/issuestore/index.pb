@@ -19,3 +19,5 @@ Q
 !src/main/java/games/Drunkard.java,8\9\8962b0bd72607159ecbe7541800d5f621621561a
 R
 "src/main/java/games/BlackJack.java,d\d\dd50a5e95bb17aab9252d29ca2df6b250f8966d5
+M
+src/main/resources/log4j2.xml,3\6\36b9f0d33e4b7e602e3cd701314fae81543db66f

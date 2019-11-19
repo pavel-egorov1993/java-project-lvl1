@@ -17,7 +17,7 @@ public class Choice {
                     break;
                 case '3': BlackJack.main();
                     break;
-                default: System.out.println("Нет игры с таким номером!");
+                default: log.info("Нет игры с таким номером!");
             }
         }
 
